@@ -165,15 +165,25 @@ If any check fails, fix it before proceeding. Do NOT move to Phase C until every
    - Same rules as Step 12: fix everything, defer nothing.
 3. After fixing, confirm all findings were addressed.
 
-### Step 14: Final Commit & CI
+### Step 14: Test Quality Review
 
-If ANY fixes were made in Steps 12-13:
+**CRITICAL: You MUST use the Skill tool to invoke the review-tests skill.**
+
+1. Call the Skill tool with `skill="review-tests"` to invoke the test quality review.
+2. After the review completes, fix ALL critical issues it identified.
+   - Rewrite tests that provide false assurance. Do not defer critical findings.
+3. Warning-level findings: fix unless doing so significantly increases scope.
+4. After fixing, confirm all critical findings were addressed.
+
+### Step 15: Final Commit & CI
+
+If ANY fixes were made in Steps 12-14:
 1. `git add` all changed files.
 2. `git commit -m "Fix review findings"`
 3. `git push`
 4. Re-run Step 11 (CI Monitor).
 
-### Step 15: Report (DO NOT MERGE)
+### Step 16: Report (DO NOT MERGE)
 
 **You MUST NOT merge the PR. You MUST NOT run `gh pr merge`. The user reviews and merges.**
 
@@ -182,5 +192,6 @@ Provide a final summary:
 - Files created or modified
 - Review findings and fixes (if any)
 - Security review findings and fixes (if any)
+- Test quality review findings and fixes (if any)
 - Confirmation: CI green, PR ready for user review
 - PR URL
