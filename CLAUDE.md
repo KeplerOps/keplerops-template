@@ -15,7 +15,7 @@ Tech stack TBD. This is a new project.
 
 Ship features, not ceremony. Write tests for significant behaviors. Document architectural decisions in ADRs.
 
-When implementing a feature, query Ground Control for related requirements. After completing work, create IMPLEMENTS and TESTS traceability links for any requirements you satisfied.
+When implementing a feature, query Ground Control for related requirements. The Ground Control project identifier is `capture`. After completing work, create IMPLEMENTS and TESTS traceability links for any requirements you satisfied.
 
 ## Code Review
 
