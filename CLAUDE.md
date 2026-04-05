@@ -5,17 +5,17 @@ Always do the right thing, not the easy thing.
 
 ## Project
 
-Capture is a feature-rich containerized CTF (Capture The Flag) platform. It provides challenge management, scoring, team and participant management, event lifecycle, notifications, range integration, and administration capabilities in a Docker-native deployment.
+<!-- TODO: Describe your project here. -->
 
 ## Build
 
-Tech stack TBD. This is a new project.
+<!-- TODO: Document build commands when tech stack is chosen. -->
 
 ## Development Philosophy
 
 Ship features, not ceremony. Write tests for significant behaviors. Document architectural decisions in ADRs.
 
-When implementing a feature, query Ground Control for related requirements. The Ground Control project identifier is `capture`. After completing work, create IMPLEMENTS and TESTS traceability links for any requirements you satisfied.
+When implementing a feature, query Ground Control for related requirements. The Ground Control project identifier is `<!-- TODO: set your GC project identifier -->`. After completing work, create IMPLEMENTS and TESTS traceability links for any requirements you satisfied.
 
 ## Code Review
 

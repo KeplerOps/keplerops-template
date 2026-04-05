@@ -17,7 +17,7 @@ This skill handles the ENTIRE lifecycle: plan, implement, verify, commit, push, 
 
 1. Enter plan mode.
 
-2. Use the `gc_get_requirement` MCP tool with uid `CTF-$ARGUMENTS` to fetch the requirement details. Note the requirement's UUID, title, statement, status, and wave.
+2. Use the `gc_get_requirement` MCP tool with uid `$ARGUMENTS` to fetch the requirement details. Note the requirement's UUID, title, statement, status, and wave.
 
 3. Use the `gc_get_traceability` MCP tool with the requirement's UUID to check for existing traceability links. Look for a link with artifact_type `GITHUB_ISSUE`.
 
@@ -115,7 +115,7 @@ If any check fails, fix it before proceeding. Do NOT move to Phase C until every
 
 ### Step 9: Commit & Push
 
-1. Craft a concise commit message in imperative mood. Example: "Add challenge CRUD with flag validation"
+1. Craft a concise commit message in imperative mood. Example: "Add user authentication with JWT tokens"
 2. NEVER include Co-Authored-By, "Generated with Claude Code", or any Claude/AI attribution in commit messages.
 3. `git commit -m "<message>"`
 3. `git push -u origin <branch>`

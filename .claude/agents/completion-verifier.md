@@ -26,7 +26,7 @@ If only GC MCP operations were performed (creating requirements, relations, trac
 
 ## 3. Traceability link check
 
-Look at the git log and branch name to determine if a requirement is being implemented (branch names typically contain issue numbers, and the conversation would reference CTF-* UIDs).
+Look at the git log and branch name to determine if a requirement is being implemented (branch names typically contain issue numbers, and the conversation would reference requirement UIDs).
 
 If a requirement was being implemented:
 - Run `git log --oneline -10` to understand recent work.
