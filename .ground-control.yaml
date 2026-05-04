@@ -1,0 +1,45 @@
+schema_version: 1
+project: keplerops-template
+github_repo: KeplerOps/keplerops-template
+# This is a template repo. Fork and fill in the optional blocks below:
+#
+# workflow:
+#   base_branch: dev
+#   test_command: <how to run tests>
+#   completion_command: <how to run the full CI gate>
+#   lint_command: <linter>
+#   format_command: <formatter>
+#
+# sonarcloud:
+#   project_key: <sonar-project-key>
+#   organization: <sonar-org>
+#
+# rules:
+#   plan_rules: .gc/plan-rules.md
+#
+# docs:
+#   adr_dir: docs/adrs/
+#   architecture_overview: docs/architecture/ARCHITECTURE.md
+#   coding_standards: docs/CODING_STANDARDS.md
+#   workflow_reference: docs/DEVELOPMENT_WORKFLOW.md
+#   knowledge_base: docs/knowledge/
+#
+# example_paths:
+#   source: <path to a representative source tree, e.g. backend/src/main/...>
+#   test: <path to a representative test tree, e.g. backend/src/test/...>
+#
+# requirements:
+#   uid_examples:
+#     - REQ-001
+#     - OBS-042
+#
+# cross_cutting_concerns:
+#   description: |
+#     Logger: <logging framework / conventions>
+#     Validation: <validation framework>
+#     Errors: <error envelope / exception handling>
+#     Auth: <auth stack>
+#     Audit: <audit conventions>
+#     Tests: <test slice / integration / property test conventions>
+#     HTTP: <http client conventions>
+#     Config: <configuration loading conventions>
