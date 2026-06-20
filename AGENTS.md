@@ -2,6 +2,44 @@
 
 This file provides context for AI coding agents (Claude Code, Codex, Copilot, etc.) working in this repository.
 
+## Ground Control Context
+
+This repo's Ground Control project id, workflow commands, and plan
+rules live in `.ground-control.yaml` at repo root (with larger rule
+files under `.gc/`). Agents read it via the
+`gc_get_repo_ground_control_context` MCP tool, which returns the full
+workflow config in a single call.
+
+This is a template repo — forks should fill in the optional workflow,
+sonarcloud, and rules sections of `.ground-control.yaml` after cloning.
+
+## Skill Installation (Claude Code + Codex)
+
+The canonical `implement` and `review-tests` skills are **user-level**, not
+per-repo. They live in `~/.claude/skills/` for Claude Code and
+`~/.codex/prompts/` for Codex, so a single canonical version is shared
+across every repo on the machine.
+
+Install them once per machine from a Ground-Control checkout:
+
+```sh
+/path/to/Ground-Control/bin/install-skills.sh
+```
+
+The script symlinks `skills/implement/SKILL.md` and
+`skills/review-tests/SKILL.md` from Ground-Control into the right
+locations for Claude Code and Codex. Re-run it after pulling
+Ground-Control to pick up updates.
+
+Forks of this template should **not** add per-repo
+`.claude/skills/implement/` or `.claude/skills/review-tests/`
+directories. Per-repo copies override the canonical and silently drift
+out of sync — leave these to the user-level installation.
+
+Repo-specific skills (e.g. `.claude/skills/repo-setup/`) are fine to
+keep per-repo: they encode workflows that belong to this repository
+and have no canonical user-level equivalent.
+
 ## Ground Control
 
 This project uses **Ground Control** for requirements management and traceability. Ground Control is a requirements engineering platform that stores requirements, relations (parent/child, dependencies), traceability links (code ↔ requirements), ADRs, and project status.
@@ -28,7 +66,7 @@ Ground Control is available as an MCP (Model Context Protocol) server configured
 | `gc_create_github_issue` | Create a GitHub issue from a requirement |
 | `gc_list_adrs` | List architecture decision records |
 
-The Ground Control project identifier for this repo is set in `CLAUDE.md`. Use it in the `project` parameter for all GC tool calls.
+The Ground Control project identifier for this repo is set in `.ground-control.yaml`. Use it in the `project` parameter for all GC tool calls.
 
 ### Workflow
 
